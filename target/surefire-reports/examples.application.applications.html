@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>examples.application.applications</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">3</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">0</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2021-01-16 03:36:53 PM</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item passed">
+                        <a href="#[1:7]">[1:7] get all applications and then get the first application by appId </a>
+                    </div>
+                    <div class="nav-item passed">
+                        <a href="#[2:20]">[2:20] update an application </a>
+                    </div>
+                    <div class="nav-item passed">
+                        <a href="#[3:55]">[3:55] delete an application by getting the first project in the list </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">examples/application/applications.feature</span><span class="feature-description">Karate test script for project service</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1:7]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [1:7]</span><span class="scenario-name">get all applications and then get the first application by appId </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 579</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[1:7]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[1:7]bg">
+                        <div class="step-container" id="1">
+                            <div class="step-ref bg-step">1</div>
+                            <div class="step-cell passed">* url 'http://localhost:8082/applications/api/v1/'</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="preformatted" data-parent="1">15:36:52.457 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container" id="2">
+                            <div class="step-ref passed">2</div>
+                            <div class="step-cell passed">Given path 'applications'</div>
+                        </div>
+                        <div class="time-cell passed">5</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="3">
+                            <div class="step-ref passed">3</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">536</div>
+                    </div>
+                    <div class="preformatted" data-parent="3">15:36:52.990 request:
+1 &gt; GET http://localhost:8082/applications/api/v1/applications
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8082
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:36:53.043 response time in milliseconds: 49.34
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+1 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 16 Jan 2021 10:06:53 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Transfer-Encoding: chunked
+1 &lt; accept-encoding: gzip,deflate
+1 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:06:53.032Z","data":{"meta":{"size":10,"nextPage":0,"count":7,"page":0},"application":[{"appId":"3f98b729-622e-49e7-a88e-b5123c505151","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"comment to update","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"qqqqqqqqqqqqqqqqqqqqqqqq","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"92db4885-ee16-4a1a-963d-765ffbd7f652","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"3195d01a-b12d-4f07-81f1-1200772019eb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"6402f28e-5296-4399-9ae5-5e90cf64bd5d","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"684453e1-7d86-47a0-a5ad-2b8959f818bb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"5fa9c14d-6591-48c2-b55f-b74b8c5fda3c","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"5db43cff-d5b7-44ff-9a49-62d954a4ed3c","organizationId":"f6f19cbf-53b8-45e6-82ab-eeec182fdcdc","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"}]},"traceId":"7550397f-8409-47a4-ae6b-85f804e8929e"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="4">
+                            <div class="step-ref passed">4</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
+                            <div class="step-cell passed">* def res = response</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref passed">6</div>
+                            <div class="step-cell passed">Given path 'applications'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="7">
+                            <div class="step-ref passed">7</div>
+                            <div class="step-cell passed">And param appId = res.data.application[1].appId</div>
+                        </div>
+                        <div class="time-cell passed">18</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="8">
+                            <div class="step-ref passed">8</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">16</div>
+                    </div>
+                    <div class="preformatted" data-parent="8">15:36:53.068 request:
+2 &gt; GET http://localhost:8082/applications/api/v1/applications?appId=3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: localhost:8082
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:36:53.080 response time in milliseconds: 10.39
+2 &lt; 200
+2 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+2 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Max-Age: 3600
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json
+2 &lt; Date: Sat, 16 Jan 2021 10:06:53 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Transfer-Encoding: chunked
+2 &lt; accept-encoding: gzip,deflate
+2 &lt; appId: 3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1
+2 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:06:53.076Z","data":{"meta":{"size":10,"nextPage":0,"count":7,"page":0},"application":[{"appId":"3f98b729-622e-49e7-a88e-b5123c505151","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"comment to update","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"qqqqqqqqqqqqqqqqqqqqqqqq","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"92db4885-ee16-4a1a-963d-765ffbd7f652","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"3195d01a-b12d-4f07-81f1-1200772019eb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"6402f28e-5296-4399-9ae5-5e90cf64bd5d","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"684453e1-7d86-47a0-a5ad-2b8959f818bb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"5fa9c14d-6591-48c2-b55f-b74b8c5fda3c","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"5db43cff-d5b7-44ff-9a49-62d954a4ed3c","organizationId":"f6f19cbf-53b8-45e6-82ab-eeec182fdcdc","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"}]},"traceId":"ca7b8721-c735-4860-b1e8-9a7913b0d330"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="9">
+                            <div class="step-ref passed">9</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[2:20]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [2:20]</span><span class="scenario-name">update an application </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 82</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[2:20]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[2:20]bg">
+                        <div class="step-container" id="10">
+                            <div class="step-ref bg-step">10</div>
+                            <div class="step-cell passed">* url 'http://localhost:8082/applications/api/v1/'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="10">15:36:53.108 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-cell comment"># Automated the process of inputting the app, organization and project Id</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="11">
+                            <div class="step-ref passed">11</div>
+                            <div class="step-cell passed">Given path 'applications'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="12">
+                            <div class="step-ref passed">12</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">12</div>
+                    </div>
+                    <div class="preformatted" data-parent="12">15:36:53.111 request:
+1 &gt; GET http://localhost:8082/applications/api/v1/applications
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8082
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:36:53.120 response time in milliseconds: 8.46
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+1 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 16 Jan 2021 10:06:53 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Transfer-Encoding: chunked
+1 &lt; accept-encoding: gzip,deflate
+1 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:06:53.118Z","data":{"meta":{"size":10,"nextPage":0,"count":7,"page":0},"application":[{"appId":"3f98b729-622e-49e7-a88e-b5123c505151","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"comment to update","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"qqqqqqqqqqqqqqqqqqqqqqqq","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"92db4885-ee16-4a1a-963d-765ffbd7f652","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"3195d01a-b12d-4f07-81f1-1200772019eb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"6402f28e-5296-4399-9ae5-5e90cf64bd5d","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"684453e1-7d86-47a0-a5ad-2b8959f818bb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"5fa9c14d-6591-48c2-b55f-b74b8c5fda3c","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"5db43cff-d5b7-44ff-9a49-62d954a4ed3c","organizationId":"f6f19cbf-53b8-45e6-82ab-eeec182fdcdc","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"}]},"traceId":"6ff0781f-fbf2-403d-ab2a-05e1e3d83344"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="13">
+                            <div class="step-ref passed">13</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="14">
+                            <div class="step-ref passed">14</div>
+                            <div class="step-cell passed">* def application =</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="preformatted" data-parent="14">{
+    "definition": {
+          "comment": "comment to update",
+          "projectId": "eaf83580-c85f-4bc3-a595-1970217e88d1"
+        },
+    "status": "DRAFT"
+}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="15">
+                            <div class="step-ref passed">15</div>
+                            <div class="step-cell passed">Given url 'http://localhost:8082/applications/api/v1'</div>
+                        </div>
+                        <div class="time-cell passed">5</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="16">
+                            <div class="step-ref passed">16</div>
+                            <div class="step-cell passed">Given path 'applications'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="17">
+                            <div class="step-ref passed">17</div>
+                            <div class="step-cell passed">And param organization-id = response.data.application[1].organizationId</div>
+                        </div>
+                        <div class="time-cell passed">7</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="18">
+                            <div class="step-ref passed">18</div>
+                            <div class="step-cell passed">And param project-id = response.data.application[1].projectId</div>
+                        </div>
+                        <div class="time-cell passed">6</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="19">
+                            <div class="step-ref passed">19</div>
+                            <div class="step-cell passed">And param app-id = response.data.application[1].appId</div>
+                        </div>
+                        <div class="time-cell passed">9</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="20">
+                            <div class="step-ref passed">20</div>
+                            <div class="step-cell passed">And request application</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="21">
+                            <div class="step-ref passed">21</div>
+                            <div class="step-cell passed">When method put</div>
+                        </div>
+                        <div class="time-cell passed">22</div>
+                    </div>
+                    <div class="preformatted" data-parent="21">15:36:53.158 request:
+2 &gt; PUT http://localhost:8082/applications/api/v1/applications?organization-id=b55bc057-4767-476b-e667-19f7f2076105&amp;project-id=4f407d28-5643-4994-84b1-747cce55e754&amp;app-id=3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Length: 114
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Host: localhost:8082
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"definition":{"comment":"comment to update","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"}
+
+15:36:53.172 response time in milliseconds: 13.10
+2 &lt; 200
+2 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+2 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Max-Age: 3600
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json;charset=UTF-8
+2 &lt; Date: Sat, 16 Jan 2021 10:06:53 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Transfer-Encoding: chunked
+2 &lt; accept-encoding: gzip,deflate
+2 &lt; app-id: 3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1
+2 &lt; organization-id: b55bc057-4767-476b-e667-19f7f2076105
+2 &lt; project-id: 4f407d28-5643-4994-84b1-747cce55e754
+2 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:06:53.170Z","data":{"application":{"appId":"3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754"}},"traceId":"319fe953-e46c-403e-a0eb-ae69068b5fe9"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="22">
+                            <div class="step-ref passed">22</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="23">
+                            <div class="step-ref passed">23</div>
+                            <div class="step-cell passed">* def appId = response.data.application.appId</div>
+                        </div>
+                        <div class="time-cell passed">5</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="24">
+                            <div class="step-ref passed">24</div>
+                            <div class="step-cell passed">* print 'updated appId is: ', appId</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="preformatted" data-parent="24">15:36:53.182 [print] updated appId is:  3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1</div>
+                    <div class="step-row">
+                        <div class="step-container" id="25">
+                            <div class="step-ref passed">25</div>
+                            <div class="step-cell passed">Given path 'applications'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="26">
+                            <div class="step-ref passed">26</div>
+                            <div class="step-cell passed">And param appId = appId</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="27">
+                            <div class="step-ref passed">27</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">11</div>
+                    </div>
+                    <div class="preformatted" data-parent="27">15:36:53.184 request:
+3 &gt; GET http://localhost:8082/applications/api/v1/applications?appId=3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: localhost:8082
+3 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:36:53.193 response time in milliseconds: 7.33
+3 &lt; 200
+3 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+3 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+3 &lt; Access-Control-Allow-Origin: *
+3 &lt; Access-Control-Max-Age: 3600
+3 &lt; Connection: keep-alive
+3 &lt; Content-Type: application/json
+3 &lt; Date: Sat, 16 Jan 2021 10:06:53 GMT
+3 &lt; Keep-Alive: timeout=60
+3 &lt; Transfer-Encoding: chunked
+3 &lt; accept-encoding: gzip,deflate
+3 &lt; appId: 3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1
+3 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:06:53.190Z","data":{"meta":{"size":10,"nextPage":0,"count":7,"page":0},"application":[{"appId":"3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"comment to update","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"3f98b729-622e-49e7-a88e-b5123c505151","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"comment to update","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"92db4885-ee16-4a1a-963d-765ffbd7f652","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"3195d01a-b12d-4f07-81f1-1200772019eb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"6402f28e-5296-4399-9ae5-5e90cf64bd5d","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"684453e1-7d86-47a0-a5ad-2b8959f818bb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"5fa9c14d-6591-48c2-b55f-b74b8c5fda3c","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"5db43cff-d5b7-44ff-9a49-62d954a4ed3c","organizationId":"f6f19cbf-53b8-45e6-82ab-eeec182fdcdc","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"}]},"traceId":"6aa351fa-cc3b-47eb-b43b-b4690899daf7"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="28">
+                            <div class="step-ref passed">28</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[3:55]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [3:55]</span><span class="scenario-name">delete an application by getting the first project in the list </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 32</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[3:55]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[3:55]bg">
+                        <div class="step-container" id="29">
+                            <div class="step-ref bg-step">29</div>
+                            <div class="step-cell passed">* url 'http://localhost:8082/applications/api/v1/'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="29">15:36:53.205 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container" id="30">
+                            <div class="step-ref passed">30</div>
+                            <div class="step-cell passed">Given url 'http://localhost:8082/applications/api/v1'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="31">
+                            <div class="step-ref passed">31</div>
+                            <div class="step-cell passed">Given path 'applications'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="32">
+                            <div class="step-ref passed">32</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">11</div>
+                    </div>
+                    <div class="preformatted" data-parent="32">15:36:53.208 request:
+1 &gt; GET http://localhost:8082/applications/api/v1/applications
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8082
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:36:53.217 response time in milliseconds: 7.38
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+1 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 16 Jan 2021 10:06:53 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Transfer-Encoding: chunked
+1 &lt; accept-encoding: gzip,deflate
+1 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:06:53.214Z","data":{"meta":{"size":10,"nextPage":0,"count":7,"page":0},"application":[{"appId":"3246a43f-6bd2-4a6b-9ea8-1d6edaece7d1","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"comment to update","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"3f98b729-622e-49e7-a88e-b5123c505151","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":{"comment":"comment to update","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1"},"status":"DRAFT"},{"appId":"92db4885-ee16-4a1a-963d-765ffbd7f652","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"3195d01a-b12d-4f07-81f1-1200772019eb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"6402f28e-5296-4399-9ae5-5e90cf64bd5d","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"684453e1-7d86-47a0-a5ad-2b8959f818bb","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectId":"5fa9c14d-6591-48c2-b55f-b74b8c5fda3c","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"},{"appId":"5db43cff-d5b7-44ff-9a49-62d954a4ed3c","organizationId":"f6f19cbf-53b8-45e6-82ab-eeec182fdcdc","projectId":"eaf83580-c85f-4bc3-a595-1970217e88d1","createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","name":"Test001 Service","description":"Manage integrations like gitlab and slack","notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","tags":[],"definition":[{"envName":"dev","pipeline":{"steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","credentialId":"28f5e864-7787-4caf-8116-080c15856969","repoRevision":"MASTER"}},{"id":"TASK_BUILD_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}},{"id":"TASK_SCAN_IMAGE","inputs":{"tag":"latest","imageName":"application-service","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d","imageRegistry":"https://quay.io"}}],"appType":"JAVA_11_WAR","endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}],"slackChannel":"customer_slack","notificationEmail":"ishara.kumbalathara@gmail.com","deploymentStrategy":"BUILD_FROM_SOURCE"},"resources":{"secrets":{"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"deployment":{"cpu":"100m","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}],"memory":"100Mi","replicas":2},"configuration":{"data":[{"key 1":"value 1"},{"key 2":"value 2"}],"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"networkPolicy":{"tls":"Edge","path":"path","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"appPort":9882,"hostName":"test host","outsidePort":2450}}},{"envName":"test","pipeline":{},"resources":{}}],"status":"DRAFT"}]},"traceId":"7bbc392a-750a-4527-9a04-c1a849072418"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="33">
+                            <div class="step-ref passed">33</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="34">
+                            <div class="step-ref passed">34</div>
+                            <div class="step-cell passed">Given path 'applications'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="35">
+                            <div class="step-ref passed">35</div>
+                            <div class="step-cell passed">And param organization-id = response.data.application[1].organizationId</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="36">
+                            <div class="step-ref passed">36</div>
+                            <div class="step-cell passed">And param project-id = response.data.application[1].projectId</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="37">
+                            <div class="step-ref passed">37</div>
+                            <div class="step-cell passed">And param app-id = response.data.application[1].appId</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="38">
+                            <div class="step-ref passed">38</div>
+                            <div class="step-cell passed">When method delete</div>
+                        </div>
+                        <div class="time-cell passed">18</div>
+                    </div>
+                    <div class="preformatted" data-parent="38">15:36:53.224 request:
+2 &gt; DELETE http://localhost:8082/applications/api/v1/applications?organization-id=b55bc057-4767-476b-e667-19f7f2076105&amp;project-id=4f407d28-5643-4994-84b1-747cce55e754&amp;app-id=3f98b729-622e-49e7-a88e-b5123c505151
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: localhost:8082
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:36:53.238 response time in milliseconds: 14.46
+2 &lt; 204
+2 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+2 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Max-Age: 3600
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json
+2 &lt; Date: Sat, 16 Jan 2021 10:06:53 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; accept-encoding: gzip,deflate
+2 &lt; app-id: 3f98b729-622e-49e7-a88e-b5123c505151
+2 &lt; organization-id: b55bc057-4767-476b-e667-19f7f2076105
+2 &lt; project-id: 4f407d28-5643-4994-84b1-747cce55e754
+2 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)</div>
+                    <div class="step-row">
+                        <div class="step-container" id="39">
+                            <div class="step-ref passed">39</div>
+                            <div class="step-cell passed">Then status 204</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>

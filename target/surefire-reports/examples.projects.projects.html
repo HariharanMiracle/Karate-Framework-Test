@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>examples.projects.projects</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">5</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">0</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2021-01-16 03:38:57 PM</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item passed">
+                        <a href="#[1:7]">[1:7] get all projects and then get the first project by projectId, organizationId, projectTitle, description </a>
+                    </div>
+                    <div class="nav-item passed">
+                        <a href="#[2:23]">[2:23] create a project and then get it by projectId, organizationId, projectTitle, description </a>
+                    </div>
+                    <div class="nav-item passed">
+                        <a href="#[3:51]">[3:51] update a project and then get it by projectId, organizationId, projectTitle, description </a>
+                    </div>
+                    <div class="nav-item passed">
+                        <a href="#[4:89]">[4:89] delete a project by getting the first project in the list </a>
+                    </div>
+                    <div class="nav-item passed">
+                        <a href="#[5:102]">[5:102] create an application entity by getting the first project in the list </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">examples/projects/projects.feature</span><span class="feature-description">Karate test script for application service</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1:7]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [1:7]</span><span class="scenario-name">get all projects and then get the first project by projectId, organizationId, projectTitle, description </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 590</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[1:7]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[1:7]bg">
+                        <div class="step-container" id="1">
+                            <div class="step-ref bg-step">1</div>
+                            <div class="step-cell passed">* url 'http://localhost:8082/applications/api/v1/'</div>
+                        </div>
+                        <div class="time-cell passed">6</div>
+                    </div>
+                    <div class="preformatted" data-parent="1">15:38:56.589 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container" id="2">
+                            <div class="step-ref passed">2</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="3">
+                            <div class="step-ref passed">3</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">534</div>
+                    </div>
+                    <div class="preformatted" data-parent="3">15:38:57.168 request:
+1 &gt; GET http://localhost:8082/applications/api/v1/projects
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8082
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:38:57.202 response time in milliseconds: 30.73
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+1 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Transfer-Encoding: chunked
+1 &lt; accept-encoding: gzip,deflate
+1 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.190Z","data":{"meta":{"size":10,"nextPage":1,"count":10,"page":0},"project":[{"projectId":"76114d81-6752-4082-a21a-828b01553201","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"4f407d28-5643-4994-84b1-747cce55e754","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"6df406ba-248b-477b-a250-e35524fe4bb8","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"cbed66b5-3128-44df-a7d6-8b65736aa80e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectTitle":"change test project2","description":"change test description2"},{"projectId":"a171a8a4-92b4-453b-90ce-1ba09823a50e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"69a7686e-39b3-4e71-a272-8160f8889402","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project2","description":"test description2"},{"projectId":"6ec2e7d9-7875-466b-95c5-998a97239e49","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project1","description":"test description1"},{"projectId":"d42f36e6-9cf2-4918-b53c-9380c15b8615","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project","description":"test description"},{"projectId":"30981491-e9f8-4fd4-a328-05af54fd409d","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectTitle":"Project 1","description":"Project Description"}]},"traceId":"68baa1e8-2ef9-480f-ba73-b78365fe045b"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="4">
+                            <div class="step-ref passed">4</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
+                            <div class="step-cell passed">* def res = response</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref passed">6</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="7">
+                            <div class="step-ref passed">7</div>
+                            <div class="step-cell passed">And param projectId = res.data.project[1].projectId</div>
+                        </div>
+                        <div class="time-cell passed">18</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="8">
+                            <div class="step-ref passed">8</div>
+                            <div class="step-cell passed">And param organizationId = res.data.project[1].organizationId</div>
+                        </div>
+                        <div class="time-cell passed">5</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="9">
+                            <div class="step-ref passed">9</div>
+                            <div class="step-cell passed">And param projectTitle = res.data.project[1].projectTitle</div>
+                        </div>
+                        <div class="time-cell passed">5</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="10">
+                            <div class="step-ref passed">10</div>
+                            <div class="step-cell passed">And param description = res.data.project[1].description</div>
+                        </div>
+                        <div class="time-cell passed">6</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="11">
+                            <div class="step-ref passed">11</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">12</div>
+                    </div>
+                    <div class="preformatted" data-parent="11">15:38:57.245 request:
+2 &gt; GET http://localhost:8082/applications/api/v1/projects?projectId=4f407d28-5643-4994-84b1-747cce55e754&amp;organizationId=b55bc057-4767-476b-e667-19f7f2076105&amp;projectTitle=test+project3&amp;description=test+description3
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: localhost:8082
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:38:57.253 response time in milliseconds: 7.32
+2 &lt; 200
+2 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+2 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Max-Age: 3600
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json
+2 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Transfer-Encoding: chunked
+2 &lt; accept-encoding: gzip,deflate
+2 &lt; description: test description3
+2 &lt; organizationId: b55bc057-4767-476b-e667-19f7f2076105
+2 &lt; projectId: 4f407d28-5643-4994-84b1-747cce55e754
+2 &lt; projectTitle: test project3
+2 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.251Z","data":{"meta":{"size":10,"nextPage":0,"count":5,"page":0},"project":[{"projectId":"76114d81-6752-4082-a21a-828b01553201","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"4f407d28-5643-4994-84b1-747cce55e754","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"6df406ba-248b-477b-a250-e35524fe4bb8","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"cbed66b5-3128-44df-a7d6-8b65736aa80e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"a171a8a4-92b4-453b-90ce-1ba09823a50e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"}]},"traceId":"2b036045-e4d8-40ac-885a-1f1b70f64f6b"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="12">
+                            <div class="step-ref passed">12</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[2:23]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [2:23]</span><span class="scenario-name">create a project and then get it by projectId, organizationId, projectTitle, description </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 197</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[2:23]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[2:23]bg">
+                        <div class="step-container" id="13">
+                            <div class="step-ref bg-step">13</div>
+                            <div class="step-cell passed">* url 'http://localhost:8082/applications/api/v1/'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="13">15:38:57.271 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container" id="14">
+                            <div class="step-ref passed">14</div>
+                            <div class="step-cell passed">* def project =</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="14">{
+  "projectTitle": "test project3",
+  "description": "test description3"
+}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="15">
+                            <div class="step-ref passed">15</div>
+                            <div class="step-cell passed">Given url 'http://localhost:8082/applications/api/v1'</div>
+                        </div>
+                        <div class="time-cell passed">6</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="16">
+                            <div class="step-ref passed">16</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="17">
+                            <div class="step-ref passed">17</div>
+                            <div class="step-cell passed">And param organization-id = 'b55bc057-4767-476b-e667-19f7f2076105'</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="18">
+                            <div class="step-ref passed">18</div>
+                            <div class="step-cell passed">And request project</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="19">
+                            <div class="step-ref passed">19</div>
+                            <div class="step-cell passed">When method post</div>
+                        </div>
+                        <div class="time-cell passed">168</div>
+                    </div>
+                    <div class="preformatted" data-parent="19">15:38:57.287 request:
+1 &gt; POST http://localhost:8082/applications/api/v1/projects?organization-id=b55bc057-4767-476b-e667-19f7f2076105
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 66
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: localhost:8082
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"projectTitle":"test project3","description":"test description3"}
+
+15:38:57.450 response time in milliseconds: 162.34
+1 &lt; 201
+1 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+1 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json;charset=UTF-8
+1 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Transfer-Encoding: chunked
+1 &lt; accept-encoding: gzip,deflate
+1 &lt; organization-id: b55bc057-4767-476b-e667-19f7f2076105
+1 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.293Z","data":{"project":{"projectId":"4ef03c58-f125-4aa5-82eb-bbaa8f55589b","organizationId":"b55bc057-4767-476b-e667-19f7f2076105"}},"traceId":"78e0b346-8926-4bf9-ad97-78aa6575ad2f"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="20">
+                            <div class="step-ref passed">20</div>
+                            <div class="step-cell passed">Then status 201</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="21">
+                            <div class="step-ref passed">21</div>
+                            <div class="step-cell passed">* def id = response.data.project.projectId</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="22">
+                            <div class="step-ref passed">22</div>
+                            <div class="step-cell passed">* print 'created id is: ', id</div>
+                        </div>
+                        <div class="time-cell passed">2</div>
+                    </div>
+                    <div class="preformatted" data-parent="22">15:38:57.457 [print] created id is:  4ef03c58-f125-4aa5-82eb-bbaa8f55589b</div>
+                    <div class="step-row">
+                        <div class="step-container" id="23">
+                            <div class="step-ref passed">23</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="24">
+                            <div class="step-ref passed">24</div>
+                            <div class="step-cell passed">And param projectId = id</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="25">
+                            <div class="step-ref passed">25</div>
+                            <div class="step-cell passed">And param organization-id = 'b55bc057-4767-476b-e667-19f7f2076105'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="26">
+                            <div class="step-ref passed">26</div>
+                            <div class="step-cell passed">And param projectTitle = 'test project3'</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="27">
+                            <div class="step-ref passed">27</div>
+                            <div class="step-cell passed">And param description = 'test description3'</div>
+                        </div>
+                        <div class="time-cell passed">2</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="28">
+                            <div class="step-ref passed">28</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">8</div>
+                    </div>
+                    <div class="preformatted" data-parent="28">15:38:57.465 request:
+2 &gt; GET http://localhost:8082/applications/api/v1/projects?projectId=4ef03c58-f125-4aa5-82eb-bbaa8f55589b&amp;organization-id=b55bc057-4767-476b-e667-19f7f2076105&amp;projectTitle=test+project3&amp;description=test+description3
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: localhost:8082
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:38:57.471 response time in milliseconds: 5.40
+2 &lt; 200
+2 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+2 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Max-Age: 3600
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json
+2 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Transfer-Encoding: chunked
+2 &lt; accept-encoding: gzip,deflate
+2 &lt; description: test description3
+2 &lt; organization-id: b55bc057-4767-476b-e667-19f7f2076105
+2 &lt; projectId: 4ef03c58-f125-4aa5-82eb-bbaa8f55589b
+2 &lt; projectTitle: test project3
+2 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.469Z","data":{"meta":{"size":10,"nextPage":0,"count":6,"page":0},"project":[{"projectId":"4ef03c58-f125-4aa5-82eb-bbaa8f55589b","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"76114d81-6752-4082-a21a-828b01553201","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"4f407d28-5643-4994-84b1-747cce55e754","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"6df406ba-248b-477b-a250-e35524fe4bb8","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"cbed66b5-3128-44df-a7d6-8b65736aa80e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"a171a8a4-92b4-453b-90ce-1ba09823a50e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"}]},"traceId":"4da8d086-7cdf-4826-b685-ec94b2d14ac1"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="29">
+                            <div class="step-ref passed">29</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[3:51]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [3:51]</span><span class="scenario-name">update a project and then get it by projectId, organizationId, projectTitle, description </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 51</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[3:51]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[3:51]bg">
+                        <div class="step-container" id="30">
+                            <div class="step-ref bg-step">30</div>
+                            <div class="step-cell passed">* url 'http://localhost:8082/applications/api/v1/'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="30">15:38:57.478 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-cell comment"># automated the process of inputting the organization and project id</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="31">
+                            <div class="step-ref passed">31</div>
+                            <div class="step-cell passed">Given url 'http://localhost:8082/applications/api/v1'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="32">
+                            <div class="step-ref passed">32</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="33">
+                            <div class="step-ref passed">33</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">7</div>
+                    </div>
+                    <div class="preformatted" data-parent="33">15:38:57.480 request:
+1 &gt; GET http://localhost:8082/applications/api/v1/projects
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8082
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:38:57.486 response time in milliseconds: 5.36
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+1 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Transfer-Encoding: chunked
+1 &lt; accept-encoding: gzip,deflate
+1 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.484Z","data":{"meta":{"size":10,"nextPage":1,"count":10,"page":0},"project":[{"projectId":"4ef03c58-f125-4aa5-82eb-bbaa8f55589b","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"76114d81-6752-4082-a21a-828b01553201","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"4f407d28-5643-4994-84b1-747cce55e754","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"6df406ba-248b-477b-a250-e35524fe4bb8","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"cbed66b5-3128-44df-a7d6-8b65736aa80e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectTitle":"change test project2","description":"change test description2"},{"projectId":"a171a8a4-92b4-453b-90ce-1ba09823a50e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"69a7686e-39b3-4e71-a272-8160f8889402","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project2","description":"test description2"},{"projectId":"6ec2e7d9-7875-466b-95c5-998a97239e49","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project1","description":"test description1"},{"projectId":"d42f36e6-9cf2-4918-b53c-9380c15b8615","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project","description":"test description"}]},"traceId":"2dec6d9f-35bf-401e-a291-d1c80a8ea138"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="34">
+                            <div class="step-ref passed">34</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="35">
+                            <div class="step-ref passed">35</div>
+                            <div class="step-cell passed">* def res = response</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="36">
+                            <div class="step-ref passed">36</div>
+                            <div class="step-cell passed">* def project =</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="36">{
+  "projectTitle": "change test project2",
+  "description": "change test description2"
+}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="37">
+                            <div class="step-ref passed">37</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="38">
+                            <div class="step-ref passed">38</div>
+                            <div class="step-cell passed">And param organization-id = res.data.project[1].organizationId</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="39">
+                            <div class="step-ref passed">39</div>
+                            <div class="step-cell passed">And param project-id = res.data.project[1].projectId</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="40">
+                            <div class="step-ref passed">40</div>
+                            <div class="step-cell passed">And request project</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="41">
+                            <div class="step-ref passed">41</div>
+                            <div class="step-cell passed">When method put</div>
+                        </div>
+                        <div class="time-cell passed">10</div>
+                    </div>
+                    <div class="preformatted" data-parent="41">15:38:57.489 request:
+2 &gt; PUT http://localhost:8082/applications/api/v1/projects?organization-id=b55bc057-4767-476b-e667-19f7f2076105&amp;project-id=76114d81-6752-4082-a21a-828b01553201
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Length: 80
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Host: localhost:8082
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"projectTitle":"change test project2","description":"change test description2"}
+
+15:38:57.497 response time in milliseconds: 7.76
+2 &lt; 200
+2 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+2 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Max-Age: 3600
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json;charset=UTF-8
+2 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Transfer-Encoding: chunked
+2 &lt; accept-encoding: gzip,deflate
+2 &lt; organization-id: b55bc057-4767-476b-e667-19f7f2076105
+2 &lt; project-id: 76114d81-6752-4082-a21a-828b01553201
+2 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.496Z","data":{"project":{"projectId":"76114d81-6752-4082-a21a-828b01553201","organizationId":"b55bc057-4767-476b-e667-19f7f2076105"}},"traceId":"d45b1394-9821-4de5-a833-2bbf62d64b37"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="42">
+                            <div class="step-ref passed">42</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="43">
+                            <div class="step-ref passed">43</div>
+                            <div class="step-cell passed">* def projectId = response.data.project.projectId</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="44">
+                            <div class="step-ref passed">44</div>
+                            <div class="step-cell passed">* def organizationId = response.data.project.organizationId</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="45">
+                            <div class="step-ref passed">45</div>
+                            <div class="step-cell passed">* print 'updated projectId is: ', projectId</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="preformatted" data-parent="45">15:38:57.505 [print] updated projectId is:  76114d81-6752-4082-a21a-828b01553201</div>
+                    <div class="step-row">
+                        <div class="step-container" id="46">
+                            <div class="step-ref passed">46</div>
+                            <div class="step-cell passed">* print 'updated organizationId is: ', organizationId</div>
+                        </div>
+                        <div class="time-cell passed">9</div>
+                    </div>
+                    <div class="preformatted" data-parent="46">15:38:57.514 [print] updated organizationId is:  b55bc057-4767-476b-e667-19f7f2076105</div>
+                    <div class="step-row">
+                        <div class="step-container" id="47">
+                            <div class="step-ref passed">47</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="48">
+                            <div class="step-ref passed">48</div>
+                            <div class="step-cell passed">And param projectId = projectId</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="49">
+                            <div class="step-ref passed">49</div>
+                            <div class="step-cell passed">And param organization-id = organizationId</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="50">
+                            <div class="step-ref passed">50</div>
+                            <div class="step-cell passed">And param projectTitle = 'change test project1'</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="51">
+                            <div class="step-ref passed">51</div>
+                            <div class="step-cell passed">And param description = 'change test description1'</div>
+                        </div>
+                        <div class="time-cell passed">3</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="52">
+                            <div class="step-ref passed">52</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">10</div>
+                    </div>
+                    <div class="preformatted" data-parent="52">15:38:57.523 request:
+3 &gt; GET http://localhost:8082/applications/api/v1/projects?projectId=76114d81-6752-4082-a21a-828b01553201&amp;organization-id=b55bc057-4767-476b-e667-19f7f2076105&amp;projectTitle=change+test+project1&amp;description=change+test+description1
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: localhost:8082
+3 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:38:57.531 response time in milliseconds: 6.71
+3 &lt; 200
+3 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+3 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+3 &lt; Access-Control-Allow-Origin: *
+3 &lt; Access-Control-Max-Age: 3600
+3 &lt; Connection: keep-alive
+3 &lt; Content-Type: application/json
+3 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+3 &lt; Keep-Alive: timeout=60
+3 &lt; Transfer-Encoding: chunked
+3 &lt; accept-encoding: gzip,deflate
+3 &lt; description: change test description1
+3 &lt; organization-id: b55bc057-4767-476b-e667-19f7f2076105
+3 &lt; projectId: 76114d81-6752-4082-a21a-828b01553201
+3 &lt; projectTitle: change test project1
+3 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.529Z","data":{"meta":{"size":10,"nextPage":0,"count":0,"page":0},"project":[]},"traceId":"4ca595a3-f8f9-44ab-bb37-80707c5189fd"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="53">
+                            <div class="step-ref passed">53</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[4:89]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [4:89]</span><span class="scenario-name">delete a project by getting the first project in the list </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 31</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[4:89]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[4:89]bg">
+                        <div class="step-container" id="54">
+                            <div class="step-ref bg-step">54</div>
+                            <div class="step-cell passed">* url 'http://localhost:8082/applications/api/v1/'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="54">15:38:57.537 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container" id="55">
+                            <div class="step-ref passed">55</div>
+                            <div class="step-cell passed">Given url 'http://localhost:8082/applications/api/v1'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="56">
+                            <div class="step-ref passed">56</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="57">
+                            <div class="step-ref passed">57</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">9</div>
+                    </div>
+                    <div class="preformatted" data-parent="57">15:38:57.538 request:
+1 &gt; GET http://localhost:8082/applications/api/v1/projects
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8082
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:38:57.546 response time in milliseconds: 6.60
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+1 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Transfer-Encoding: chunked
+1 &lt; accept-encoding: gzip,deflate
+1 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.544Z","data":{"meta":{"size":10,"nextPage":1,"count":10,"page":0},"project":[{"projectId":"76114d81-6752-4082-a21a-828b01553201","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"change test project2","description":"change test description2"},{"projectId":"4ef03c58-f125-4aa5-82eb-bbaa8f55589b","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"4f407d28-5643-4994-84b1-747cce55e754","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"6df406ba-248b-477b-a250-e35524fe4bb8","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"cbed66b5-3128-44df-a7d6-8b65736aa80e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectTitle":"change test project2","description":"change test description2"},{"projectId":"a171a8a4-92b4-453b-90ce-1ba09823a50e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"69a7686e-39b3-4e71-a272-8160f8889402","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project2","description":"test description2"},{"projectId":"6ec2e7d9-7875-466b-95c5-998a97239e49","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project1","description":"test description1"},{"projectId":"d42f36e6-9cf2-4918-b53c-9380c15b8615","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project","description":"test description"}]},"traceId":"f553d2d2-8171-4ced-8609-e95d770ea749"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="58">
+                            <div class="step-ref passed">58</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="59">
+                            <div class="step-ref passed">59</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="60">
+                            <div class="step-ref passed">60</div>
+                            <div class="step-cell passed">And param organization-id = response.data.project[1].organizationId</div>
+                        </div>
+                        <div class="time-cell passed">8</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="61">
+                            <div class="step-ref passed">61</div>
+                            <div class="step-cell passed">And param project-id = response.data.project[1].projectId</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="62">
+                            <div class="step-ref passed">62</div>
+                            <div class="step-cell passed">When method delete</div>
+                        </div>
+                        <div class="time-cell passed">10</div>
+                    </div>
+                    <div class="preformatted" data-parent="62">15:38:57.561 request:
+2 &gt; DELETE http://localhost:8082/applications/api/v1/projects?organization-id=b55bc057-4767-476b-e667-19f7f2076105&amp;project-id=4ef03c58-f125-4aa5-82eb-bbaa8f55589b
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: localhost:8082
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:38:57.568 response time in milliseconds: 7.11
+2 &lt; 200
+2 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+2 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Max-Age: 3600
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json
+2 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Transfer-Encoding: chunked
+2 &lt; accept-encoding: gzip,deflate
+2 &lt; organization-id: b55bc057-4767-476b-e667-19f7f2076105
+2 &lt; project-id: 4ef03c58-f125-4aa5-82eb-bbaa8f55589b
+2 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+""</div>
+                    <div class="step-row">
+                        <div class="step-container" id="63">
+                            <div class="step-ref passed">63</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[5:102]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [5:102]</span><span class="scenario-name">create an application entity by getting the first project in the list </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 31</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[5:102]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[5:102]bg">
+                        <div class="step-container" id="64">
+                            <div class="step-ref bg-step">64</div>
+                            <div class="step-cell passed">* url 'http://localhost:8082/applications/api/v1/'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="64">15:38:57.575 karate.env system property was:</div>
+                    <div class="step-row">
+                        <div class="step-container">
+                            <div class="step-ref passed"></div>
+                            <div class="step-cell comment"># Automated the process of inputting the organization and project id</div>
+                        </div>
+                        <div class="time-cell comment"></div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="65">
+                            <div class="step-ref passed">65</div>
+                            <div class="step-cell passed">Given url 'http://localhost:8082/applications/api/v1'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="66">
+                            <div class="step-ref passed">66</div>
+                            <div class="step-cell passed">Given path 'projects'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="67">
+                            <div class="step-ref passed">67</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">9</div>
+                    </div>
+                    <div class="preformatted" data-parent="67">15:38:57.578 request:
+1 &gt; GET http://localhost:8082/applications/api/v1/projects
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:8082
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+
+15:38:57.586 response time in milliseconds: 6.92
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+1 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 3600
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Transfer-Encoding: chunked
+1 &lt; accept-encoding: gzip,deflate
+1 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.584Z","data":{"meta":{"size":10,"nextPage":1,"count":10,"page":0},"project":[{"projectId":"76114d81-6752-4082-a21a-828b01553201","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"change test project2","description":"change test description2"},{"projectId":"4f407d28-5643-4994-84b1-747cce55e754","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"6df406ba-248b-477b-a250-e35524fe4bb8","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"cbed66b5-3128-44df-a7d6-8b65736aa80e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"b03e2b34-27be-428d-82cd-e04d9daec629","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectTitle":"change test project2","description":"change test description2"},{"projectId":"a171a8a4-92b4-453b-90ce-1ba09823a50e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project3","description":"test description3"},{"projectId":"69a7686e-39b3-4e71-a272-8160f8889402","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project2","description":"test description2"},{"projectId":"6ec2e7d9-7875-466b-95c5-998a97239e49","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project1","description":"test description1"},{"projectId":"d42f36e6-9cf2-4918-b53c-9380c15b8615","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectTitle":"test project","description":"test description"},{"projectId":"30981491-e9f8-4fd4-a328-05af54fd409d","organizationId":"e55ec057-4767-476e-b667-19f7f2076105","projectTitle":"Project 1","description":"Project Description"}]},"traceId":"46880e95-21f8-4889-8a86-678f9b90eba4"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="68">
+                            <div class="step-ref passed">68</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="69">
+                            <div class="step-ref passed">69</div>
+                            <div class="step-cell passed">* def application =</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="preformatted" data-parent="69">{
+   "createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda",
+   "createdUserEmail":"isharakumbalathara@randoli.ca",
+   "status":"DRAFT",
+   "name":"Test001 Service",
+   "description":"Manage integrations like gitlab and slack",
+   "tags": [],
+   "notificationEmail":"ishara.kumbalathara@gmail.com",
+   "slackChannel":"customer_slack",
+   "definition": [
+      {
+         "envName": "dev",
+         "resources": {
+            "deployment": {
+               "replicas": 2,
+               "cpu": "100m",
+               "memory": "100Mi",
+               "labels":[
+                  { "app": "integration_service" },
+                  { "appId": "fbd91299-017d-49f2-9c54-1c44b75c899c" },
+                  { "label 1": "value1" },
+                  { "label 2": "value2" }
+               ]
+            },
+            "networkPolicy": {
+               "hostName": "test host",
+               "path": "path",
+               "appPort": 9882,
+               "outsidePort": 2450,
+               "tls": "Edge",
+               "labels": [
+                  { "app": "integration_service" },
+                  { "appId": "fbd91299-017d-49f2-9c54-1c44b75c899c" }
+               ]
+            },
+            "configuration": {
+               "labels": [
+                  { "app": "integration_service" },
+                  { "appId": "fbd91299-017d-49f2-9c54-1c44b75c899c" }
+               ],
+               "data": [
+                  { "key 1": "value 1" },
+                  { "key 2": "value 2" }
+               ]
+            },
+            "secrets": {
+               "labels": [
+                  { "app": "integration_service" },
+                  { "appId": "fbd91299-017d-49f2-9c54-1c44b75c899c" }
+               ],
+               "data": [
+                  { "secret 1": "secret value 1" },
+                  { "secret 2": "secret value 2" }
+               ]
+            }
+         },
+         "pipeline": {
+            "notificationEmail":"ishara.kumbalathara@gmail.com",
+            "slackChannel":"customer_slack",
+            "deploymentStrategy": "BUILD_FROM_SOURCE",
+            "appType": "JAVA_11_WAR",
+            "steps": [
+               {
+                  "id": "TASK_SCAN_SOURCE",
+                  "inputs": {
+                     "repoUrl": "https://gitlab.com/randoli/eng/services/app-director/application-service",
+                     "repoRevision": "MASTER",
+                     "credentialId": "28f5e864-7787-4caf-8116-080c15856969"
+                  }
+               },
+               {
+                  "id": "TASK_BUILD_JAVA_11_WAR",
+                  "inputs": {
+                     "repoUrl": "https://gitlab.com/randoli/eng/services/app-director/application-service",
+                     "repoRevision": "MASTER",
+                     "credentialId": "28f5e864-7787-4caf-8116-080c15856969"
+                  }
+               },
+               {
+                  "id": "TASK_BUILD_IMAGE",
+                  "inputs": {
+                     "imageRegistry": "https://quay.io",
+                     "imageName": "application-service",
+                     "tag": "latest",
+                     "credentialId": "e45575a8-448a-4554-a534-5a4ccae78b0d"
+                  }
+               },
+               {
+                  "id": "TASK_SCAN_IMAGE",
+                  "inputs": {
+                     "imageRegistry": "https://quay.io",
+                     "imageName": "application-service",
+                     "tag": "latest",
+                     "credentialId": "e45575a8-448a-4554-a534-5a4ccae78b0d"
+                  }
+               }
+            ],
+            "endSteps": [
+               {
+                  "id": "TASK_NOTIFIY_EMAIL",
+                  "inputs": {
+                     "notificationEmail": "ishara.kumbalathara@gmail.com"
+                  }
+               },
+               {
+                  "id": "TASK_NOTIFIY_SLACK",
+                  "inputs": {
+                     "slackChannel": "customer_slack"
+                  }
+               },
+               {
+                  "id": "TASK_TRIGGER_CLEAN_UP"
+               }
+            ]
+         }
+      },
+      {
+         "envName": "test",
+         "resources": {},
+         "pipeline": {}
+      }
+   ]
+}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="70">
+                            <div class="step-ref passed">70</div>
+                            <div class="step-cell passed">Given url 'http://localhost:8082/applications/api/v1'</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="71">
+                            <div class="step-ref passed">71</div>
+                            <div class="step-cell passed">Given path 'projects/applications'</div>
+                        </div>
+                        <div class="time-cell passed">2</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="72">
+                            <div class="step-ref passed">72</div>
+                            <div class="step-cell passed">And param organization-id = response.data.project[1].organizationId</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="73">
+                            <div class="step-ref passed">73</div>
+                            <div class="step-cell passed">And param project-id = response.data.project[1].projectId</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="74">
+                            <div class="step-ref passed">74</div>
+                            <div class="step-cell passed">And request application</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="75">
+                            <div class="step-ref passed">75</div>
+                            <div class="step-cell passed">When method post</div>
+                        </div>
+                        <div class="time-cell passed">13</div>
+                    </div>
+                    <div class="preformatted" data-parent="75">15:38:57.594 request:
+2 &gt; POST http://localhost:8082/applications/api/v1/projects/applications?organization-id=b55bc057-4767-476b-e667-19f7f2076105&amp;project-id=4f407d28-5643-4994-84b1-747cce55e754
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Length: 2237
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Host: localhost:8082
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"createdUserId":"f6f39cbf-53b8-45e6-82ab-eeec182fdcda","createdUserEmail":"isharakumbalathara@randoli.ca","status":"DRAFT","name":"Test001 Service","description":"Manage integrations like gitlab and slack","tags":[],"notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","definition":[{"envName":"dev","resources":{"deployment":{"replicas":2,"cpu":"100m","memory":"100Mi","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"},{"label 1":"value1"},{"label 2":"value2"}]},"networkPolicy":{"hostName":"test host","path":"path","appPort":9882,"outsidePort":2450,"tls":"Edge","labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}]},"configuration":{"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"data":[{"key 1":"value 1"},{"key 2":"value 2"}]},"secrets":{"labels":[{"app":"integration_service"},{"appId":"fbd91299-017d-49f2-9c54-1c44b75c899c"}],"data":[{"secret 1":"secret value 1"},{"secret 2":"secret value 2"}]}},"pipeline":{"notificationEmail":"ishara.kumbalathara@gmail.com","slackChannel":"customer_slack","deploymentStrategy":"BUILD_FROM_SOURCE","appType":"JAVA_11_WAR","steps":[{"id":"TASK_SCAN_SOURCE","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","repoRevision":"MASTER","credentialId":"28f5e864-7787-4caf-8116-080c15856969"}},{"id":"TASK_BUILD_JAVA_11_WAR","inputs":{"repoUrl":"https://gitlab.com/randoli/eng/services/app-director/application-service","repoRevision":"MASTER","credentialId":"28f5e864-7787-4caf-8116-080c15856969"}},{"id":"TASK_BUILD_IMAGE","inputs":{"imageRegistry":"https://quay.io","imageName":"application-service","tag":"latest","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d"}},{"id":"TASK_SCAN_IMAGE","inputs":{"imageRegistry":"https://quay.io","imageName":"application-service","tag":"latest","credentialId":"e45575a8-448a-4554-a534-5a4ccae78b0d"}}],"endSteps":[{"id":"TASK_NOTIFIY_EMAIL","inputs":{"notificationEmail":"ishara.kumbalathara@gmail.com"}},{"id":"TASK_NOTIFIY_SLACK","inputs":{"slackChannel":"customer_slack"}},{"id":"TASK_TRIGGER_CLEAN_UP"}]}},{"envName":"test","resources":{},"pipeline":{}}]}
+
+15:38:57.604 response time in milliseconds: 9.38
+2 &lt; 201
+2 &lt; Access-Control-Allow-Headers: Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+2 &lt; Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, CONNECT, PATCH
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Max-Age: 3600
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json;charset=UTF-8
+2 &lt; Date: Sat, 16 Jan 2021 10:08:57 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Transfer-Encoding: chunked
+2 &lt; accept-encoding: gzip,deflate
+2 &lt; organization-id: b55bc057-4767-476b-e667-19f7f2076105
+2 &lt; project-id: 4f407d28-5643-4994-84b1-747cce55e754
+2 &lt; user-agent: Apache-HttpClient/4.5.12 (Java/11.0.2)
+{"timestamp":"2021-01-16T10:08:57.600Z","data":{"application":{"appId":"6454d7b3-5c0d-426a-9973-c64206c7734e","organizationId":"b55bc057-4767-476b-e667-19f7f2076105","projectId":"4f407d28-5643-4994-84b1-747cce55e754"}},"traceId":"075ff0e2-cec3-4086-a1b8-544052df2b1f"}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="76">
+                            <div class="step-ref passed">76</div>
+                            <div class="step-cell passed">Then status 201</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="77">
+                            <div class="step-ref passed">77</div>
+                            <div class="step-cell passed">* def id = response.data.application.appId</div>
+                        </div>
+                        <div class="time-cell passed">4</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="78">
+                            <div class="step-ref passed">78</div>
+                            <div class="step-cell passed">* print 'created id is: ', id</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="78">15:38:57.609 [print] created id is:  6454d7b3-5c0d-426a-9973-c64206c7734e</div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>
